@@ -28,7 +28,7 @@ const spawn = require('cross-spawn');
 const fs = require('fs-extra');
 const tmp = require('tmp');
 const read = require('fs').createReadStream;
-const unpack = require('tar-pack').unpack;
+const unpack = require('@nexssp/packunpack').unpack;
 const chalk = require('chalk');
 const commander = require('commander');
 
@@ -49,7 +49,7 @@ function isNodeProject() {
                     let indexOfSlash = obj.name.indexOf('/');
                     let scopeName = obj.name.substr(1, indexOfSlash - 1);
                     let nameExcludingScope = obj.name.substr(indexOfSlash + 1, obj.name.length);
-                    projectName = `${scopeName}-${nameExcludingScope}`;                    
+                    projectName = `${scopeName}-${nameExcludingScope}`;
                 }else{
                     projectName = obj.name;
                 }
@@ -120,7 +120,7 @@ function unpackPackage(packageFilePath, unpackDir) {
                         .catch(err => {
                             reject(err);
                         })
-                };
+                }
             }))
     });
 }
@@ -360,7 +360,7 @@ function unpublish() {
             console.log(chalk.yellow(`${projectNameInPackageJson}`) + chalk.green(` package has been removed from global`));
         })
         .catch(err => {
-            console.log(chalk.red('Failed to remove package from global'));
+            console.log(chalk.red('Failed to remove package from global/n'+err));
         });
 }
 

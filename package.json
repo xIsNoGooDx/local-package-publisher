@@ -1,6 +1,6 @@
 {
   "name": "local-package-publisher",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A utility app for publishing your npm packages locally for testing",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/debashish2014/local-package-publisher.git"
+    "url": "git+https://github.com/xIsNoGooDx/local-package-publisher.git"
   },
   "keywords": [
     "local",
@@ -28,15 +28,15 @@
     "package-lock.json"
   ],
   "bugs": {
-    "url": "https://github.com/debashish2014/local-package-publisher/issues"
+    "url": "https://github.com/xIsNoGooDx/local-package-publisher/issues"
   },
-  "homepage": "https://github.com/debashish2014/local-package-publisher#readme",
+  "homepage": "https://github.com/xIsNoGooDx/local-package-publisher#readme",
   "dependencies": {
-    "chalk": "^2.4.2",
-    "commander": "^2.19.0",
-    "cross-spawn": "^6.0.5",
-    "fs-extra": "^7.0.1",
-    "tar-pack": "^3.4.1",
-    "tmp": "0.0.33"
+    "@nexssp/packunpack": "1.0.6",
+    "chalk": "5.2.0",
+    "commander": "10.0.0",
+    "cross-spawn": "7.0.3",
+    "fs-extra": "11.1.0",
+    "tmp": "0.2.1"
   }
 }
